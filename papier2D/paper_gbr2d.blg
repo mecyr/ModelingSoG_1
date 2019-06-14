@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/TeX Live for SUSE Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: paper_gbr2d.aux
+The style file: plain.bst
+Database file #1: biblio_gib.bib
+Warning--empty publisher in Baines1995
+Warning--empty publisher in Grinstein2007
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            716 strings with 9892 characters,
+and the built_in function-call counts, 10842 in all, are:
+= -- 1022
+> -- 629
+< -- 1
++ -- 254
+- -- 216
+* -- 841
+:= -- 1897
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 200
+chr.to.int$ -- 0
+cite$ -- 33
+duplicate$ -- 343
+empty$ -- 753
+format.name$ -- 216
+if$ -- 2189
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 32
+newline$ -- 158
+num.names$ -- 62
+pop$ -- 156
+preamble$ -- 1
+purify$ -- 170
+quote$ -- 0
+skip$ -- 239
+stack$ -- 0
+substring$ -- 655
+swap$ -- 40
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 120
+warning$ -- 2
+while$ -- 84
+width$ -- 33
+write$ -- 340
+(There were 2 warnings)

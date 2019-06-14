@@ -1,0 +1,26 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Numerical configuration}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}The numerical forecasting system}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Continuous free-surface compressible equations in z-coordinates}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Density and pressure decomposition}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Slow vs fast components}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Bathymetry of the numerical configuration}{7}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Water mass and tidal forcing}{7}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Initialization of density profile and shear current : effect of Coriolis Pseudo-Force}{8}{subsection.2.7}
+\contentsline {section}{\numberline {3}The reference "forecast"}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Comparison with \textit {in situ} observations}{10}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Tidal currents \& hydraulic control}{10}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Internal tide dynamics}{11}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Compared dispersion and dissipation with Korteweg-de Vries (KdV) dynamics and satellite images}{13}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Comparison with Korteweg-de Vries (KdV) dynamics}{13}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Comparison with Satellite images}{14}{subsubsection.3.2.2}
+\contentsline {section}{\numberline {4}Sensitivity testing}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Physical factors}{15}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Topography}{15}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Amplitude of the tides}{15}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Numerical factors}{16}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}The spatial resolution}{16}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}The non-hydrostatic algorithm}{17}{subsubsection.4.2.2}
+\contentsline {section}{\numberline {5}Discussion and conclusion}{18}{section.5}
+\contentsline {section}{\numberline {6}Appendix : Computation of a Froude number}{20}{section.6}

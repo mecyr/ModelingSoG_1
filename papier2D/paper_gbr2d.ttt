@@ -1,0 +1,81 @@
+\begin{table*}
+
+\centering
+\begin{tabular}{|p{\linewidth/3}|c|c|}
+\hline
+Number of horizontal points & \multicolumn{2}{c|} {602x3}  \\
+%\hline
+$\Delta x$ & \multicolumn{2}{c|} {221 m}\\
+%\hline
+Number of $\sigma$-levels & \multicolumn{2}{c|} {40} \\
+%\hline
+Depth & Min & Max\\
+%\cline{2-3}
+   & 247.6 m & 900 m\\
+%   \hline
+   $\Delta$z & 6 m & 23 m\\
+%\hline
+$\Delta t_s$ & \multicolumn{2}{c|} {4 s}\\
+%\hline
+$\Delta t_f$ & \multicolumn{2}{c|} {0.5 s}\\
+%\hline
+Vertical Viscosity & \multicolumn{2}{c|} {$10^{-6}$ m$^2$/s}\\
+%\hline
+Lateral Viscosity & \multicolumn{2}{c|} {$10^{-5}$ m$^2$/s}\\
+%\hline
+Diffusivity & \multicolumn{2}{c|} {$10^{-6}$ m$^2$/s}\\
+%\hline
+Momentum Advective Scheme & \multicolumn{2}{c|} {C2-TVD}  \\
+%\hline
+TS Advective Scheme & \multicolumn{2}{c|} {WENO5}  \\
+\hline
+\end{tabular}
+\captionof{table}{Numerical parameters of simulation \textbf{SimRef}}
+\label{tabsimref}
+%\end{minipage}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}
+
+\centering
+\begin{tabular}{|c|m{0.22\linewidth}|m{0.22\linewidth}|}
+\hline
+& Upper layer transport & Lower layer transport\\
+\hline
+\textbf{SimAllCor} & 1.28 & -9.16\\
+\hline
+\textbf{SimNoCor} & 45.04 & -43.5 \\
+\hline
+\textbf{SimRef} & 0.7 & -6.43\\
+\hline
+\end{tabular}
+\captionof{table}{3T averaged transports at CS (m$^2$/s)}
+\label{tab_transport}
+%\end{minipage}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}
+[!h]
+ \centering
+  \begin{tabular}{|l|c|c|c|c||c|c|c|}
+ \hline
+  & \multicolumn{4}{c||}{Depth (m)} & \multicolumn{3}{c|}{Slope}\\
+  \hline
+    & ES & TB & CS & TN& ES-TB & CS & CS-TN\\
+   \hline
+   Farmer and Armi (1988) & 250 & 200 & 150 & 50 & 0.006 & 0.001 & 0.002\\
+   \hline
+   \textbf{SimAllCor} & 325 & 218 & 188.8 & 57 & 0.006 & 0.006 & 0.006\\
+   \hline
+   \textbf{SimNoCor} & 280 & 225 & 170 & 154& 0 & 0.006 & 0\\
+   \hline
+   \textbf{SimRef} & 210 & 180 & 140 & 138 & 0.005 & 0.0005 & 0\\
+  \hline
+ \end{tabular}
+ \caption{Depth (m) and slope of the interface.}
+ \label{tabdepth}
+\end{table*}
+\efloatseparator
+ 

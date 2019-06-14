@@ -1,0 +1,244 @@
+\begin{figure*}
+
+ \centering
+ \includegraphics[width=0.51\textwidth]{schema_echange.png}
+ \captionof{figure}{Mean exchange in the Strait of Gibraltar. The interaction of the tide with the stratification and bathymetry generates small-scale physical phenomenon. (a) Linear / Small amplitude internal wave. (b) Hydraulic Jump. (c) Large-amplitude internal waves or internal solitary waves (ISW).}
+\label{scheme_GBR}
+%\end{wrapfigure}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+\centering
+ \includegraphics[width=1\textwidth]{bathy3d+Rr3d.png}
+ \caption { a) Bathymetry of the strait of Gibraltar, location of the transect A (white dotted line). Black squares indicate the position of moorings. (ES: Espartell Sill, TB: Tanger Basin, CS: Camarinal Sill , TN: Tarifa Narrows)
+ b) Maximum distance along the transverse (y) direction between 2 isobaths of depth h.}
+ \label{Fig1}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!t]
+ \centering
+ \includegraphics[width=0.6\textwidth]{profil_LEx.png}
+ \captionof{figure} {Salinity and temperature (dashed lines) profile of Mediterranean water (black) and Atlantic water (grey) at initial time-step}
+\label{fig_LEx}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!t]
+ \centering
+ \includegraphics[width=1\textwidth]{stratif_corio_vs_nocorio.png}
+ \caption {Longitudinal current and isopycnal contours at 70 h during the spin-up phase for \textbf{SimAllCor} (a) and \textbf{SimNoCor} (b).
+ White contour : transversal current $v = 0.5 \ m/s$  Black contour : transversal current v=-0.5 \ m/s. Bolded isopycnal $\rho' = -0.7 \ kg/m^3$.
+ The vertical dashed lines indicate the location of the profiles given in figure \ref{fig_current}.}
+  \label{fig2}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+
+  \centering
+  \includegraphics[width=\textwidth]{UV_CS_3T_ref.png}
+  \captionof{figure}{3T-averaged longitudinal (black) and transversal current (grey) at the locations in figure \ref{fig2} for configurations \textbf{SimRef} (plain) \textbf{SimAllCor} (dashed) and \textbf{SimNoCor}(dotted). Tidally averaged measures of currents at stations M2 and M7 (figure \ref{Fig1}) in Candela et al. 1990 (diamonds).}
+  \label{fig_current}
+%\end{minipage}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+ \centering
+ \includegraphics[width=1\textwidth]{Fn_1-2_ref_3T.png}
+ \caption{Averaged isopycnal position over 3T (bolded p = -0.7) and region where F > 1 for mode 1 inflow (black) outflow (grey) and for mode 2 inflow (dotted black) outflow (dotted grey) for \textbf{SimRef}. Averages are calculated at maximal inflow and outflow, see figure \ref{hov_ref}.}
+ \label{fig_fn_ref}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+\begin{subfigure}{0.5\linewidth}
+\includegraphics[width=\textwidth]{RW_J4_9h12_ref.png}
+\end{subfigure}
+ ~
+\begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RW_J4_10h36_ressautebb.png}
+
+\end{subfigure}
+
+\begin{subfigure}{0.5\linewidth}
+\includegraphics[width=\textwidth]{RW_J4_11h36_deferl.png}
+
+\end{subfigure}
+ ~
+\begin{subfigure}{0.5\linewidth}
+\includegraphics[width=\textwidth]{RW_J4_13h_gen_mod1.png}
+
+\end{subfigure}
+ \caption{Density fields of \textbf{SimRef} zoomed over CS, bolded isopycnal: $\rho'\ =-0.5\ kg/m^3$ at t=8.5 T (a), t=8.6 T (b), t=8.7 T (c) and t=8.8 T (d)}
+ \label{CV_ressaut}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!t]
+\centering
+\begin{subfigure}{1\linewidth}
+\centering
+\includegraphics[width=1\linewidth]{hov_ref_-05.png}
+\end{subfigure}
+
+\begin{subfigure}{1\linewidth}
+   \centering
+  \includegraphics[width=\textwidth]{RW_J4_9h12-15h48.png}
+\end{subfigure}
+ \caption {(a) vertically averaged current over CS (dots indicate times of plots in figure \ref{CV_ressaut}). (b) Space-time diagram of the vertical displacement of isopycnal $=-0.5 \ kg/m^3$ of \textbf{SimRef}. The dashed lines indicate transition between ebb tide and flood tide, the black lines indicate the times of the two bottom panels. (c) and (d) vertical velocity field and isopycnals at the times indicated in panel (b). In white is the isopycnal $\rho'\ =\ -0.5 \ kg/m^3 $.}
+ \label{hov_ref}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+\centering
+\includegraphics[width=1\linewidth]{exp_kdv_75-8T.png}
+\caption{Isopycnal $\rho$'=-0.5 kg/m$^3$ simulated by CROCO-NBQ at t=7.5 T (grey) and t=8 T (black). Evolution of the interface as simulated by KdV (dashed) and eKdV (dotted).}
+\label{fig_kdv}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+ \centering
+ \includegraphics[width=0.45\textwidth]{sat_2dref_20042016_zoom.png}
+ \caption{SAR image of Sentinel 1 the 20/04/2016 at 6h27 UTC and absolute value of the slope of $\eta$ in \textbf{SimRef} (in red the slope is non-zero). }
+ \label{sat2d}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!t]
+\centering
+\includegraphics[width=1\linewidth]{hov_p-05_CS.png}
+\caption{Same as fig \ref{hov_ref}.a and b for \textbf{SimA}.}
+\label{hov_CS}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+\centering
+\includegraphics[width=1\linewidth]{w_it515_modes_CS.png}
+\caption{Left : field of vertical velocity  and isopycnal contours in \textbf{SimA}. Right: profiles of vertical celerity in the water column.}
+\label{figCS_2}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+  \centering
+  \begin{subfigure}{0.45\linewidth}
+  \includegraphics[width=1\textwidth]{RW_j4_9h12_spring.png}
+  \end{subfigure}
+  ~
+    \centering
+  \begin{subfigure}{0.45\linewidth}
+  \includegraphics[width=1\textwidth]{CV_train_spring.png}
+  \end{subfigure}
+  \caption{Relative density contours in \textbf{SimB}.(a) area of F>1 (bolded contour). (b) Relative density contours in \textbf{SimRef}.}
+  \label{fig_cv_spring}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!t]
+
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RW_J3_21h_50mtvd.png}
+ % \subcaption{}
+  \end{subfigure}
+  ~
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RW_J4_7h15train_50mtvd.png}
+  %  \subcaption{}
+  \end{subfigure}
+
+  \begin{subfigure}{1\linewidth}
+  \includegraphics[width=\textwidth]{NrhoTZ_50mNH_5785.png}
+  %  \subcaption{}
+  \end{subfigure}
+    ~
+  \begin{subfigure}{1\linewidth}
+  \includegraphics[width=\textwidth]{NrhoTZ_50mNH_535.png}
+  %\subcaption{}
+  \end{subfigure}
+  \caption{(a) and (b) fields of relative density in configuration \textbf{Sim01}. (c) and (d) evolution of the profiles of relative density and $N$ in the water column at the positions of the dashed vertical lines in respectively (a) and (b). (b) dahsed lines are the correponding isopynals for configuration \textbf{SimRef}.}
+  \label{fig50mtvd}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!t]
+
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RW_J3_21_hydro.png}
+  %\subcaption{}
+  \end{subfigure}
+  ~
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RW_83T_hydro.png}
+  %\subcaption{}
+  \end{subfigure}
+
+%   \begin{subfigure}{1\linewidth}
+%   \includegraphics[width=\textwidth]{Nrho_TZ_hydro_5785.png}
+%   %\subcaption{}
+%   \end{subfigure}
+%   ~
+%   \begin{subfigure}{1\linewidth}
+%   \includegraphics[width=\textwidth]{Nrho_TZ_hydro_535.png}
+%   %\subcaption{}
+%   \end{subfigure}
+  \caption{Same as figure \ref{fig50mtvd}.a %, b, c and d for configuration \textbf{Sim02}}
+  and b for configuration \textbf{Sim02}}
+  \label{fig220HNH}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RV_75T_ref.png}
+  %\subcaption{220m NH}
+  \end{subfigure}
+  ~
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RV_75T_50m.png}
+  %\subcaption{50m NH}
+  \end{subfigure}
+
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RV_75T_220mH.png}
+  %\subcaption{220m H}
+  \end{subfigure}
+  ~
+  \begin{subfigure}{0.5\linewidth}
+  \includegraphics[width=\textwidth]{RV_75T_50mH.png}
+  %\subcaption{50m H}
+  \end{subfigure}
+  \caption{XZ-Vorticity (s$^{-1}$) and isopycnals (kg/m$^3$) for \textbf{SimRef} (a, 220 m non-hydrostatic), \textbf{Sim01} (b, 50 m non-hydrostatic), \textbf{Sim02} (c, 220 m hydrostatic) and \textbf{Sim03} (d, 50 m hydrostatic)}
+  \label{figvortCS}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}
+[!h]
+\centering
+\includegraphics[width=1\linewidth]{comp_fn_strat.png}
+\caption{Top panel : field of longitudinal velocity ($u (x,z)$) at $t = 8.5\ T$ with contour of mode 1 supercritical region (F>1) calculated from a 3T-averaged stratification . Bottom panel : Computed linear speed of mode 1 internal waves ($c^*_1 (x)$) from a 3T-averaged stratification in configuration \textbf{SimRef}.}
+\label{fig_annexeF}
+\end{figure*}
+\efloatseparator
+ 

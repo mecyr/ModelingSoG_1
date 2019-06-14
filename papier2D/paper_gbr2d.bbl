@@ -1,0 +1,196 @@
+\begin{thebibliography}{10}
+
+\bibitem{alpers85}
+Werner Alpers.
+\newblock Theory of radar imaging of internal waves.
+\newblock {\em Nature}, 314:245--247, 1985.
+
+\bibitem{Auclair2018}
+F.~Auclair, L.~Bordois, Y.~Dossmann, T.~Duhaut, C.~Nguyen, A.~Paci, and
+  C.~Ulses.
+\newblock A non-hydrostatic non-{B}oussinesq algorithm for free-surface ocean
+  modelling.
+\newblock {\em Minor revision, Ocean Modelling}, 2018.
+
+\bibitem{Baines1995}
+P.~G. Baines.
+\newblock {\em Topographic Effects in Stratified Flows}.
+\newblock {C}ambridge {U}niversity {P}ress edition, 1995.
+
+\bibitem{Beth79}
+J.P. Bethoux.
+\newblock Budgets of the mediterranean sea. their depenqance on the local
+  climate and on the characteristics of the atlantic waters.
+\newblock {\em Oceanologica Acta}, 2(2):157--163, 1979.
+
+\bibitem{Bormans1989}
+M.~Bormans and C.~Garrett.
+\newblock The effect of rotation on the surface inlow through the {S}trait of
+  {G}ibraltar.
+\newblock {\em Jounal of physical oceanography}, 19:1535--1542, 1989.
+
+\bibitem{Brandt1996}
+P.~Brandt, W.~Alpers, and J.O. Backhaus.
+\newblock Study of the generation and propagation of internal waves in the
+  {S}trait of {G}ibraltar using a numerical model and synthetic aperture radar
+  images of the european {ERS} 1 satellite.
+\newblock {\em Journal of Geophysical Reaserch}, 101:14237--14252, 1996.
+
+\bibitem{Bray95}
+N.~A. Bray, J.~Ochoa, and T.~H. Kinder.
+\newblock The role of the interface in exchange through the strait of
+  gibraltar.
+\newblock {\em Journal of Geophysical Research}, 100(C6):10755--10776, 1995.
+
+\bibitem{Bruno2002}
+M.~Bruno, J.~Juan Alonso, A.~C\'ozar, J.~Viad, A.~Ruiz-Ca\ navate,
+  F.~Echevarr\'ia, and J.~Ruiz.
+\newblock The boiling-water phenomena at {C}amarinal {S}ill, the strait of
+  {G}ibraltar.
+\newblock {\em Deep-Sea Research II}, 49:4097--4113, 2002.
+
+\bibitem{BS84}
+H.~L. Bryden and H.~M. Stommel.
+\newblock Limiting processes that determine basic features of the circulation
+  in the {M}editerranean {S}ea.
+\newblock {\em Oceanologica Acta}, 7(3):289--296, 1984.
+
+\bibitem{Bryden94}
+H.L. Bryden, J.~Candela, and T.H. Kinder.
+\newblock Exchange through the strait of gibraltar.
+\newblock {\em Progress in Oceanography}, 33:201--248, 1994.
+
+\bibitem{CW90}
+J.~Candela and C.~Winant.
+\newblock Tides in the {S}trait of {G}ibraltar.
+\newblock {\em Journal of Geophysocal Research}, 95(C5):7313--7335, 1990.
+
+\bibitem{Debreu2012}
+L.~Debreu, P.~Marchesiello, P.~Penven, and G.~Cambon.
+\newblock Two-way nesting in split-explicit ocean models: algorithms,
+  implementation and validation.
+\newblock {\em Ocean Modelling}, 49-50:1--21, 2012.
+
+\bibitem{Dossmann2012}
+Y.~Dossmann.
+\newblock {\em Ondes internes générées sur une dorsale océanique : du
+  laboratoire à l'océan}.
+\newblock PhD thesis, Universit\'e toulouse III Paul Sabatier, 2012.
+
+\bibitem{tpxo8}
+Gary~D. Egbert and Svetlana~Y. Erofeeva.
+\newblock Efficient inverse modeling of barotropic ocean tides.
+\newblock {\em Journal of Atmospheric and Oceanic Technology}, 19.2:183--204,
+  2002.
+
+\bibitem{FA1988}
+D.~Farmer and L.~Armi.
+\newblock The flow of {M}editerranean {W}ater through the {S}trait of
+  {G}ibraltar.
+\newblock {\em Progress in Oceanography}, 21(1):1--103, 1988.
+
+\bibitem{FA1986}
+D.~M. Farmer and L.~Armi.
+\newblock Maximal two-layer exchange over a sill and through the combination of
+  a sill and contraction with barotropic flow.
+\newblock {\em Journal of Fluid Mechanics}, 164:53--76, 1986.
+
+\bibitem{Garett90}
+C.~Garrett, M.~Bormans, and K.~Thompson.
+\newblock Is the exchange through the {S}trait of {G}ibraltar maximal or
+  submaximal ?
+\newblock {\em The Physical Oceanography of Sea Straits}, pages 271--294, 1990.
+
+\bibitem{SG2008}
+J.C.~S\'anchez Garrido, J.~Garc\'ia Lafuente, F.~Criado Aldeanueva,
+  A.~Baquerizo, and G.~Sannino.
+\newblock Time-spatial variability observed in velocity of propagation of the
+  internal bore in the strait of gibraltar.
+\newblock {\em Journal of Geophysical Research}, 113(C07034), 2008.
+
+\bibitem{Grinstein2007}
+F.F. Grinstein, L.G. Margolin, and W.J. Rider.
+\newblock {\em Implicit Large Eddy Simulation : Computing Turbulen Fluid
+  Dynamics}.
+\newblock {C}ambridge {U}niversity {P}ress edition, 2007.
+
+\bibitem{Izquierdo2001}
+A.~Izquierdo, L.~Tejedor, D.V. Sein, J.O. Backhaus, P.~Brandt, A.~Rubino, and
+  B.~A. Kagan.
+\newblock Control variability and internal bore evolution in the {S}trait of
+  {G}ibraltar: A 2-{D} two-layer model study.
+\newblock {\em Estuarine, Coastal and Shelf Science}, 53:637–651, 2001.
+
+\bibitem{Naranjo2014}
+C.~Naranjo, J.~Garcia-Lafuente, G.~Sannino, and J.C. Sanchez-Garrido.
+\newblock How much do tides affect the circulation of the {M}editerranean
+  {S}ea? from local processes in the {S}trait of {G}ibraltar to basin-scale
+  effects.
+\newblock {\em Progress in Oceanography}, 127:108--116, 2014.
+
+\bibitem{SG2011}
+J.~C. S\'anchez-Garrido, G.~Sannino, L.~Liberti, J.~Garcia Lafuente, and
+  L.~Pratt.
+\newblock Numerical modeling of three-dimensional stratified tidal flow over
+  {C}amarinal {S}ill, {S}trait of {G}ibraltar.
+\newblock {\em Jounal of geophysical Reaserch}, 116, 2011.
+
+\bibitem{Sannino2004}
+G.~Sannino, A.~Bargagli, and V.~Artale.
+\newblock Numerical modeling of the semidiurnal tidal exchange through the
+  {S}trait of {G}ibraltar.
+\newblock {\em Journal of Geophysical Reaserch}, 109(C05011), 2004.
+
+\bibitem{Sannino2002}
+G.~Sannino, B.~Bargagli, and V.~Artale.
+\newblock Numerical mdeling of the mean excghange through the {S}trait of
+  {G}ibraltar.
+\newblock {\em Jounral of geophysicall reaserch}, 107, 2002.
+
+\bibitem{Sannino2009}
+G.~Sannino, M.~Herrmann, A.~Carillo, V.~Rupolo, V.~Ruggiero, V.~artale, and
+  P.~Heimbach.
+\newblock An eddy-permitting model of the {M}editerranean {S}ea with two-way
+  grid refinement at the {S}trait of {G}ibraltar.
+\newblock {\em Ocean Modelling}, 30:56--72, 2009a.
+
+\bibitem{Sannino2009b}
+G.~Sannino, L.~Pratt, and A.~Carillo.
+\newblock Hydraulic criticality of the exchange flow through the strait of
+  gibraltar.
+\newblock {\em Journal of Physical Oceanography}, 39:2779--2799, 2009b.
+
+\bibitem{S2005}
+A.F. Shchepetkin and J.C. McWilliams.
+\newblock The regional oceanic modeling system ({ROMS}): a split-explicit,
+  free-surface, topography-following-coordinate oceanic model.
+\newblock {\em Ocean Modelling}, 9:347–404, 2005.
+
+\bibitem{SN2015}
+J.~Soto-Navarro, S.~Somot, F.~Sevault, J.~Beuvier, F.~Criado-Aldeanueva,
+  J.~Garc\'ia-Lafuente, and K.~Béranger.
+\newblock Evaluation of regional ocean circulation models for the
+  {M}editerranean {S}ea at the {S}trait of {G}ibraltar: volume transport and
+  thermohaline properties of the outflow.
+\newblock {\em Climate Dynamics}, 44:1277--1292, 2015.
+
+\bibitem{Vazquez2006}
+A.~V\'azquez, N.~Stashchuk, V.~Vlasenko, M.~Bruno, A.~Izquierdo, and P.~C.
+  Gallacher.
+\newblock Evidence of multimodal structure of the baroclinic tide in the
+  {S}trait of {G}ibraltar.
+\newblock {\em Geophysical reaserch letters}, 33, 2006.
+
+\bibitem{Vlasenko2009}
+V.~Vlasenko, J.~C.~Sanchez Garrido, N.~Stashchuk, J.~Garcia Lafuente, and
+  M.~Losada.
+\newblock Three-dimensional evolution of large-amplitude internal waves in the
+  {S}trait of {G}ibraltar.
+\newblock {\em Jounral of physical oceanography}, 39, 2009.
+
+\bibitem{Wesson94}
+J.C. Wesson and M.C. Gregg.
+\newblock Mixing at camarinal sill in the strait of gibraltar.
+\newblock {\em Journal of Geophysical Research}, 99(C5):9847--9878, 1994.
+
+\end{thebibliography}

@@ -1,0 +1,859 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Rapport Contrat SHOM/LA   16CR01                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{lipsum,etoolbox}% http://ctan.org/pkg/{lipsum,etoolbox}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\frenchbsetup{StandardLists=true} 
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%package article 2D Margaux
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{amsxtra}
+\usepackage{wasysym}
+\usepackage{isomath}
+\usepackage{mathtools}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{enumerate}
+\usepackage{tensor}
+\usepackage{pifont}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+
+\usepackage{subcaption}
+\usepackage[normalem]{ulem} %25/05
+\usepackage{caption}%04/06
+\usepackage{afterpage}%04/6
+\usepackage{geometry}%05/06
+\usepackage{wrapfig}%04/06
+\usepackage{chngcntr}
+%%%%FIN MH
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  Chapter and Section Numbering (1)               %%%%%%%%%
+%%%%%%%%  Francis                                         %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+\titleformat*{\section}{\large\bfseries}
+\titleformat{\chapter}[hang]
+    {\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter:}{1em}{\Large}
+    \titlespacing*{\chapter} {0pt}{50pt}{40pt}
+\usepackage{lipsum}  
+\usepackage{pdfpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Lib doc Lucie%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[normalem]{ulem}
+\usepackage{array}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+
+%\usepackage[backend=biber,
+%    style=numeric,
+%    sorting=none,
+%    isbn=false,
+%    doi=false,
+%    url=false,
+%]{biblatex}\addbibresource{bibliography.bib} %Margaux 
+
+%\usepackage{subfig}
+%\usepackage{wrapfig}
+%\usepackage{wasysym}
+%\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+%\usepackage{tikz}
+\usepackage{longtable}
+%\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+%\usepackage{float}
+\usepackage{multirow}
+%\usepackage{makecell}
+%\usepackage{fancyhdr}
+%\usepackage[toc,page]{appendix}
+%\usepackage[hidelinks]{hyperref}
+%\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+%\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+%\usepackage{flowchart}\usepackage[paperheight=11.69in,paperwidth=8.27in,left=0.98in,right=0.98in,top=0.98in,bottom=0.98in,headheight=1in]{geometry}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+%\urlstyle{same}
+%%%%%% Lib doc Lucie%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{
+Modélisation des fines échelles internes\\ dans la région du détroit de Gibraltar.\\
+\bigskip\bigskip
+\large{Contrat SHOM / UPS 16CR01.}\\
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+Groupe Croco, Laboratoire d'Aérologie}
+
+\author{Lucie Bordois\footnote{Post-Doctorante.}, Margaux Hilt\footnote{Stagiaire M2 puis doctorante SDUEE 
+Toulouse.},
+Eric Chassignet\footnote{Professeur invité.},
+Laurent Roblou, Cyril Nguyen, Francis Auclair\footnote{Permanents CNRS et UPS au Laboratoire d'Aérologie.}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliographie (Margaux)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter %remove numbers in bibliography
+\renewcommand\@biblabel[1]{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Début du document                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  Chapter and Section Numbering (2)               %%%%%%%%%
+%%%%%%%%  Francis                                         %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thepage}{}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\setcounter{secnumdepth}{4}
+\newcommand*{\newpar}{%
+  \ifsubsection\else\stepcounter{subsection}\fi
+  \paragraph{}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\Roman{chapter}.\arabic{section}.\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{\Roman{chapter}.\arabic{section}.\arabic{table}}
+%%% A conditional for knowing whether a \subsection
+%%% command has been issued
+
+\author{Lucie Bordois\footnote{Post-Doctorante.}, Margaux Hilt\footnote{Stagiaire M2 puis doctorante SDUEE Toulouse.},
+Eric Chassignet\footnote{Professeur invité.},
+Laurent Roblou, Cyril Nguyen, Francis Auclair\footnote{Permanents CNRS et UPS au Laboratoire d'Aérologie.}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliographie (Margaux)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter %remove numbers in bibliography
+\renewcommand\@biblabel[1]{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   Début du document                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  Chapter and Section Numbering (2)               %%%%%%%%%
+%%%%%%%%  Francis                                         %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thepage}{}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\setcounter{secnumdepth}{4}
+\newcommand*{\newpar}{%
+  \ifsubsection\else\stepcounter{subsection}\fi
+  \paragraph{}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\Roman{chapter}.\arabic{section}.\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{\Roman{chapter}.\arabic{section}.\arabic{table}}
+
+%%% A conditional for knowing whether a \subsection
+%%% command has been issued
+\newif\ifsubsection
+
+%%% Set the conditional to true after \subsection
+%%% and reset the paragraph counter
+\preto{\subsection}{\global\subsectiontrue\setcounter{paragraph}{0}}
+%%% Reset it to false after \section
+\preto{\section}{\global\subsectionfalse}
+
+\counterwithin*{paragraph}{section}
+\makeatletter
+\renewcommand\paragraph{%
+    \@startsection{paragraph}{4}{0mm}%
+       {-\baselineskip}%
+       {.5\baselineskip}%
+       {\normalfont\normalsize\bfseries}}
+\makeatother
+\renewcommand{\theparagraph}{\alph{paragraph}.}
+
+\maketitle
+\newpage
+	 \null
+\newpage
+ 
+{\setlength{\baselineskip}{0.8\baselineskip}
+\tableofcontents\par}
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+%\tableofcontents
+
+\maketitle
+\newpage
+	 \null
+\newpage
+
+\selectlanguage{french}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Chapitre Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+\label{chapitreintroduction}
+
+\section{Contexte, généralités}
+ \noindent\textbf{\textit{Extrait du Cahier des clauses techniques particulières du contrat de recherche Gibraltar 16CR01}}\\
+Cette étude s'inscrit dans le cadre du projet stratégique PROTEVS (\textit{prévision océanique, turbidité, écoulement, vagues et sédimentologie}) qui vise l’amélioration des systèmes d’analyse et de prévision décrivant l’environnement marin en temps réel. Il s’agit de prendre en compte les couplages entre l’état de mer (vagues) et la circulation océanique (courants à plus grande échelle), et de réaliser des études et recherches pour la représentation des petites échelles, des paramètres biochimiques et de la dynamique sédimentaire. PROTEVS est un programme d’études amont (PEA 082401) financé par la DGA.\\
+
+\noindent Dans ce contexte, les objectifs du contrat de recherche \textit{Gibraltar 16CR01} entre le SHOM et le laboratoire d'Aérologie  sont : 
+
+\begin{itemize}[label=\textbullet]
+ \item d’améliorer la connaissance des processus océaniques et côtiers impactant les opérations militaires (action continue de ``recherche amont``).
+ \item d'étudier la faisabilité de systèmes permettant la reconstitution en temps réel (analyse) de l’environnement hydrodynamique (état de mer, courants, température, salinité) ainsi que de son évolution possible (prévision).
+d’étudier des possibilités d’y intégrer des paramètres biogéochimiques (matière en suspension, mobilité des sols, transparence, visibilité).
+\end{itemize}
+
+\noindent  Le projet concerne l'amélioration d’un modèle numérique décrivant la circulation à petite échelle de l’océan. Il comporte trois tâches distinctes\footnote{La Tâche 3 a fait l'objet d'un avenant au contrat initial signé en 2016.}:
+\begin{itemize}[label=\textbullet]
+\item la première tâche consiste à implémenter un modèle numérique qui puisse totalement relaxer l’hypothèse d’hydrostaticité dans la région du détroit de Gibraltar et à procéder à une évaluation (coût calcul/performance) de la maquette numérique ainsi proposée.
+\item la deuxième tâche concerne la généralisation du système de coordonnées verticales, à partir d’une approche ALE (\textit{Arbitrary Lagrangian-Eulerian coordinate}).
+\item la troisième tâche concerne enfin la fourniture d'un produit numérique élaboré sur la base des maquettes numériques du détroit de Gibraltar telles que mises en place à la tâche 1.
+\end{itemize}
+
+\label{simuFE}
+\section{Simulation des "fines échelles" \textit{(Groupe de recherche CROCO-Aérologie) }}
+
+\noindent \textit{\textbf{Dynamique des fines échelles}}\\
+Le groupe de modélisation océanique du Laboratoire d'Aérologie\footnote{Laboratoire de l'Observatoire Midi-Pyrénées}, contractant du projet Gibraltar 16CR01 et devenu en 2018 ''groupe CROCO-Aérologie``, étudie la \textit{dynamique des fines échelles océaniques} depuis maintenant une dizaine d'années. La qualification de \textit{fines échelles} englobe ici de façon très large une gamme de processus présentant une \textit{extension horizontale plus fine que le premier rayon de Rossby}. Cette définition couvre par conséquent des mécanismes et des processus dynamiques très hétérogènes:
+\begin{itemize}
+ \item les ondes de gravité (ondes de surface ou ondes internes) ou encore les ondes acoustiques ainsi que les mécanismes de génération et de déferlement associés à ces différents types d'ondes,
+ \item les instabilités primaires de Kelvin-Helmholtz, les instabilités convectives... ainsi que la cascade turbulente directe initiée par ces instabilités primaires et conduisant au mélange diapycnal,
+ \item les processus localisés liés au contrôle hydraulique des masses d'eau (ressauts hydrauliques...)
+\end{itemize}
+En parallèle, un projet pédagogique (SiGeoS) dédié à la turbulence géophysique a été mis en place aux niveaux Licence et Master par le groupe CROCO-Aérologie\footnote{SigeoS est un projet IDEX-Toulouse \textit{Pédagogie Innovante} proposant enseignement théorique et enseignement pratique en laboratoire et numérique. Le volet en Laboratoire du projet pédagogique SiGeoS est une collaboration avec le CNRM (Météo-France/CNRS)}. \\
+
+\noindent \textit{\textbf{Simulation des grandes échelles turbulentes (LES)}}\\
+Pour mener à bien ce projet de recherche et son alter-ego pédagogique, le groupe CROCO-Aérologie a été amené à faire évoluer ses outils numériques et en particulier son code numérique d'océan. La simulation des ''fines échelles océaniques`` nécessite en effet la mise en place d'une ''simulation des grandes structures turbulentes`` (en anglais \textit{LES}, pour Large Eddy Simulation). Les codes océaniques à toit libre (explicite) et pas-de-temps séparés (\textit{time-splitting} en anglais) devenus des classiques en modélisation océanique côtière et régionale au milieu des années 90 s'appuient tous sur l'hypothèse hydrostatique et ne permettent donc pas la simulation numérique tri-dimensionnelle des structures en vorticité comme le requière la LES. Le groupe CROCO-Aérologie a donc développé un code à toit libre et pas-de-temps séparés s'appuyant de façon originale sur un coeur non-hydrostatique (NH). Un algorithme par correction de pression (\textit{SNH}) a tout d'abord été implémenté dans le code Symphonie (Auclair et al., 2011). L'association de cet algorithme NH avec un schéma temporel à pas-de-temps séparés se révélant inappropriée\footnote{Association correction de pression / schéma temporel à pas-de-temps séparés: pour être efficace la correction de pression doit être implémentée dans le mode interne (lent), l'intégration et la correction du mode externe est numériquement mal posé et entraîne la génération de modes numériques potentiellement instables. D'un point de vue physique, les ondes de surface NH (ondes courtes) présentent en effet un cisaillement vertical de vitesse résolu par le seul mode lent (3D): le rapport des pas-de-temps des deux modes doit donc être proche de 1...}, un algorithme original, cette fois compressible (dit \textit{''non Boussinesq``}) a alors été proposé et implémenté en mode recherche dans le même code Symphonie (\textit{SNBQ}) (Auclair et al., 2018). \\
+
+\noindent \textit{\textbf{Non-hydrostaticité et performances numériques}}\\
+Ces développements algorithmiques laissant entrevoir des perspectives prometteuses pour l'étude des processus dynamiques, la nécessité de réaliser d'importants gains de performances a alors conduit à une remise en cause globale des schémas temporels, des schémas d'advection d'ordre réduit et des schémas de turbulence anisotropes généralement utilisés en océanographie régionale et côtière et plus spécifiquement dans \textit{SNBQ}. L'algorithme non-hydrostatique, non-Boussinesq développé en mode recherche dans \textit{SNBQ} a donc été implémenté dans ROMS-AGRIF rebaptisé CROCO (Auclair et al., \textit{publication en cours}). \\
+Des gains de performances importants (à minima un ordre de grandeur) ont ainsi pu être réalisés grâce tout d'abord à plusieurs spécificités du code ROMS (Shchepetkin et McWilliams, 2005): 
+\begin{itemize}
+	\item son écriture et sa structure épurée facilitant la gestion de la \textit{mémoire-cache} des processeurs, 
+	\item ou encore son implantation MPI particulièrement efficace. 
+\end{itemize}
+
+\noindent Une réécriture et une restructuration complète de l'algorithme non-hydrostatique, non-Boussinesq en un coeur numérique bi-modal\footnote{\textit{SNBQ} présente un coeur numérique à trois modes (modes interne(3D)/externe(2D)/NBQ(3D) alors que CROCO-NBQ est bi-modal (modes lent et rapide (NBQ) tous deux 3D.} ont finalement permis d'atteindre un niveau de performance numérique compatible avec la simulation \textit{LES} de la région du détroit de Gibraltar.\\
+Le développement, les gains de performances et la consolidation du cœur numérique CROCO-NBQ ont pu être menés à bien grâce aux compétences complémentaires des instituts et universités associés au GdR CROCO (\textit{SHOM, IFREMER, INRIA, IRD}, \textit{INSU-CNRS} et \textit{Université de Toulouse Paul Sabatier}). Le code CROCO, base de la présente étude, est un véritable outil \textit{communautaire} de part son développement, son utilisation et sa distribution.\\
+
+
+\section{Le détroit de Gibraltar: un "démonstrateur"}
+
+En plus de ses enjeux stratégiques, le détroit de Gibraltar présente un indéniable intérêt en termes de dynamique océanique. A l'échelle de la circulation générale, il est l'unique lieu d'échange entre les bassins méditerranéen et Nord-Atlantique. La bathymétrie peu profonde du détroit impose un contrôle hydraulique sur ces échanges entraînant ressauts hydrauliques, générations d'ondes internes de grande amplitude, instabilités en cascade... autant de mécanismes qui induisent in fine un mélange intense des deux masses d'eau.\\
+La qualité des prévisions de la circulation générale et des principales masses d'eau en Atlantique Nord et en Méditerranée dépend donc pour partie de notre capacité à comprendre et à simuler les principaux mécanismes et processus dynamiques de \textit{fine échelle} à l'œuvre dans le détroit de Gibraltar.\\
+
+\noindent \textbf{\textit{Expertise dynamique}}\\
+Lors du lancement du projet Gibraltar 16CR01 en 2016, le groupe CROCO-Aérologie avait déjà consacré une première étude à la région du détroit de Gibraltar avec la thèse de Lucie Bordois (Bordois, 2015, Bordois et al. 2016, Bordois et al., 2017). Cette étude avait permis :
+\begin{itemize}
+	\item  d'évaluer la "faisabilité" d'une simulation numérique des \textit{fines échelles} dans le détroit. Une maquette reposant sur une section verticale 2D avec les codes de recherche SNH puis SNBQ a ainsi été développée, les coûts de calcul et la qualité de la dynamique simulée ont été évalués.
+	\item de réaliser une analyse approfondie des régimes dynamiques induits par la présence d'un détroit.
+	\item de mettre en évidence la génération d'ondes internes de grande amplitude de Mode 1 et 2 au dessus des seuils de Camarinal et d'Espartel.
+\end{itemize}
+La thèse de Lucie Bordois a aussi confirmé la nécessité de franchir un cap en matière d'efficacité numérique: le code de recherche SNBQ se devait d'évoluer vers des méthodologies "massivement parallèles" efficaces. Une approche communautaire apparaissait alors clairement comme la seule alternative pouvant rapidement ouvrir les portes de la LES en océanographie. \\
+
+\noindent \textbf{\textit{L'efficacité numérique: un enjeu communautaire}}\\
+La région du détroit a par conséquent été choisie par le GdR CROCO comme "zone test" \textit{(démonstrateur}) et le groupe CROCO-Aérologie a concentré sur cette région l'essentiel de ses efforts de développements du cœur numérique non-hydrostatique et non-Boussinesq \textit{CROCO-NBQ} avec plusieurs objectifs:
+\begin{itemize}
+ \item \textit{mieux comprendre et mieux décrire la dynamique de fine échelle dans la région du détroit}. Les mécanismes de génération des ressauts hydrauliques, des ondes stationnaires orographiques \footnote{\textit{"Ocean lee waves"} en anglais.}, des ondes internes de grande amplitude (ondes solitaires) et des instabilités primaires     constituent autant de clés pour aborder la difficile problématique du mélange des masses d'eau (dans cette région et plus généralement dans l'océan global).
+ \item  \textit{mettre en place par étape une maquette LES du détroit}. Cette maquette doit permettre à minima la simulation explicite des instabilités primaires se développant à l'interface des eaux méditerranéennes et atlantiques et doit in fine offrir une représentation réaliste et précise du mélange diapycnal intense entre ces deux masses d'eaux.
+ \item \textit{comprendre et simuler la formation du jet méditerranéen dans le détroit}. C'est dans la région du détroit que cette composante importante de la circulation dans le bassin Nord-Atlantique prend naissance et acquière ses principales caractéristiques (densité, vorticité potentielle...).
+\end{itemize}
+
+\section{Méthodologie et engagements contractuels}
+
+\noindent\textit{\textbf{Une hiérarchie de maquettes}}\\
+Le groupe CROCO-Aérologie a choisi une méthodologie de développement numérique et d'exploration de la dynamique s'appuyant sur une hiérarchie de \textit{maquettes numériques} de complexité et de réalisme croissants:
+\begin{itemize}
+\item raffinement par étape de la physique à partir de maquettes hydrostatiques puis non-hydrostatiques et non-Boussinesq,
+\item raffinement d'échelles avec des résolutions spatiales de l'ordre de quelques centaines de mètres (220 m pour la maquette NH-REF) réduites dans un second temps à seulement quelques dizaines de mètres (45 m pour la maquette NH-HR).
+\end{itemize}
+Il est à noter que la résolution la plus basse proposée dans le cadre du présent rapport est déjà 5 fois plus fine que la résolution initialement proposée dans le cadre du contrat de recherche Gibraltar 16CR1. En effet, la "\textit{résolution dans une gamme équivalente à celles de la maquette HYCOM utilisée par le SHOM pour cette région}" (soit environ 1.8 km) proposée dans le contrat s'est révélée beaucoup trop grande pour explorer les \textit{fines échelles} dans la région du détroit. Les résolutions de l'ordre de 220 m (maquette NH-REF) et de 45 m (maquette NH-HR) permettent de représenter et d'explorer les ondes internes de grande amplitude \textit{(ondes solitaires)} et les instabilités dynamiques primaires se développant entre les deux masses d'eau et conduisant à l'intensification locale du mélange (pour la résolution la plus fine seulement). Le travail en amont sur les performances numériques du coeur CROCO-NBQ (Section \ref{simuFE}) a permis de réaliser ce saut en résolution.\\
+\noinden Chaque nouvelle maquette a été implémentée et sa dynamique explorée en deux temps. Des sections verticales bi-dimensionnelles alignées avec le transect principal de la campagne Gibraltar Experiment (Farmer et Armi, 1988) ont tout d'abord été mises en place, leur dynamique étant dans la foulée détaillée. Cette stratégie de dégradation des maquettes 3D est un choix reposant sur deux objectifs principaux:
+\begin{itemize}
+\item réduire les coûts de calcul inhérents à la mise au point des nouveaux algorithmes et des nouveaux schémas numériques,
+\item simplifier la dynamique océanique complexe en l'assimilant à celle d'un canal hypothétiquement aligné avec l'axe du détroit.
+\end{itemize}
+
+\noindent\textit{\textbf{Une dynamique simplifiée}}\\
+Un choix méthodologique fort a ensuite consisté, pour chaque maquette, à ne retenir que les forçages et les caractéristiques hydrologiques indispensables à la mise en place de la dynamique à explorer:
+\begin{itemize}
+\item Identifiée comme un élément clé de la dynamique régionale, une bathymétrie précise de la région du détroit a été fournie par le SHOM.
+\item Les ondes et les courants de marée sont imposés de façon réaliste aux frontières des différentes maquettes.
+\item Les deux principales masses d'eau (d'origine atlantique et méditerranéenne) ont dans un premier temps été simulées via une stratégie dite en \textit{Lock-Exchange} avant d'être forcées directement à partir des prévisions du modèle de circulation à "haute résolution" MIT-GCM fournies par l'ENEA \footnote{http://www.enea.it/it/seguici/pubblicazioni/pdf-volumi/cresco-report-2016.pdf. Nous remercions G. Sannino et l'ENEA pour ces sorties de simulation ainsi que pour l'accueil à Rome (Italie) de Lucie Bordois, alors post-doctorante dans le cadre du présent contrat.}.
+\item Les forçages atmosphériques et telluriques ont, en première approximation, été négligés.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapitre: Modélisation des fines échelles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Modélisation des fines échelles dans le détroit de Gibraltar\\}
+\label{chapitremodele}
+
+La Tâche 1 du contrat Gibraltar 16CR01 est scindée en deux sous-tâches portant respectivement sur:
+\begin{itemize}
+\item{le développement et la validation d’une hiérarchie de maquettes hydrostatiques et non-hydrostatiques de la région du détroit de Gibraltar \textit{(Tâche 1.1)}}
+\item{la dynamique à haute résolution dans le détroit de Gibraltar \textit{(Tâche 1.2)}}
+\end{itemize}
+
+\noindent Les maquettes et la dynamique qu'elles ont respectivement permis d'explorer sont maintenant décrites par ordre croissant de complexité pour offrir un rendu graduel des résultats obtenus. L'ordre proposé correspond de plus à la chronologie de développement et d'exploration choisie. \\
+
+La Tâche 2 a été confiée à Eric Chassignet, visiteur scientifique au laboratoire d'Aérologie dans le cadre du présent contrat. Elle a pour objectif d'évaluer la pertinence d'une évolution du système de coordonnées verticales du code communautaire CROCO.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Sections verticales 2D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sections verticales 2D: maquettes NH-REF et NH-HR \textit{(Tâche 1.1)}}
+\label{section2D}
+
+\noindent\fbox{\noindent\begin{minipage}{1\textwidth}
+Une configuration numérique simple 2D est implémentée dans le détroit de Gibraltar avec le code communautaire CROCO dans sa version non-hydrostatique, non-Boussinesq (CROCO-NBQ). Cette configuration est peu coûteuse en temps de calcul et incorpore la bathymétrie le long de l'axe du détroit avec sa configuration de seuils (Farmer et Armi, 1988, programme \textit{Gibraltar Experiment}). Dans l'élaboration de cette configuration, une attention toute particulière a été apportée au rôle de la pseudo-force de Coriolis sur l'échange moyen simulé lors de l'initialisation par \textit{lock-exchange}.\\
+Malgré les défauts inhérents à une représentation 2D-verticale (nécessairement limitée dynamiquement et non représentative des effets longitudinaux comme le contrôle dans le détroit de Tarifa), la configuration proposée permet de représenter de façon réaliste les mécanismes de \textit{fine échelle} dans le détroit à la fréquence de la marée barotrope : propagation des deux premiers modes d'ondes internes, contrôles hydrauliques aux seuils, ressaut hydraulique, et mélange turbulent. En particulier, les ondes internes de grande amplitude de mode 1 se propageant dans l'est du détroit sont caractérisées comme ondes solitaires (ou solitons) par comparaison avec le modèle analytique non-linéaire de Korteweig de Vries.\\
+La modulation des phénomènes observés par divers paramètres (bathymétrie, intensité des courants de marée, hypothèse hydrostatique, résolution spatiale) est étudiée en détail. A haute résolution (environ 45 m), la relaxation de l'hypothèse non-hydrostatique est indispensable pour représenter les instabilités de cisaillement qui apparaissent dans le jet Méditerranéen, et qui constituent l'amorce de la cascade turbulente directe.
+\end{minipage}
+}
+
+\bigskip\bigskip
+\noindent Les résultats présentés dans la section (\ref{chapitremodele}.\ref{section2D}) donnent lieu à la rédaction d'un manuscrit. Margaux Hilt aidée par l'équipe de développement du GdR CROCO est en charge de la soumission prochaine de ce manuscrit pour publication dans un journal international de rang A. Le reste de la section est donc proposé en anglais.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%debut article 2D MH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{english}
+\input{./paper_gbr2d-content.tex} 
+\selectlanguage{french}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Maquettes 3D NH-HR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Maquette 3D NH-REF \textit{(Tâche 1.1)}}
+\label{section3DNHREF}
+
+\noindent\fbox{\noindent\begin{minipage}{1\textwidth}
+\noindent La maquette tri-dimensionnelle NH-REF est, comme son nom l'indique, la maquette de référence implémentée et exploitée dans le cadre du présent contrat. Cette maquette s'appuie sur le coeur non-hydrostatique et non-Boussinesq CROCO et sur des schémas d'advection d'ordre élevé. Elle a permis de mettre en place une première simulation des "fines échelles" pour un faible coût de calcul. La dynamique 3D ainsi simulée a confirmé les caractéristiques des processus et autres mécanismes mis en évidence par Bordois (2015) à partir d'une section verticale le long du transect principal de la campagne \textit{"Gibraltar Experiment"}. Une évaluation de la pertinence de la marée barotrope simulée a plus particulièrement été réalisée. Les caractéristiques du ressaut hydraulique et des trains d'ondes solitaires ont dans un second temps été confrontées aux observations disponibles dans la région du détroit. La variabilité de ces processus à l'amplitude de la marée a été étudiée.
+\end{minipage}
+}
+
+\bigskip\bigskip
+\noindent Les résultats présentés dans la section (\ref{chapitremodele}.\ref{section3DNHREF}) donnent lieu à la rédaction d'un manuscrit. Lucie Bordois aidée par l'équipe de développement du GdR CROCO est en charge de la soumission prochaine de ce manuscrit pour publication dans un journal international de rang A. Le reste de la section est donc proposé en anglais.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%debut article NH-REF Lucie
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{english}
+\input{./Paper_Lucie.tex} 
+\selectlanguage{french}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Maquette 3D NH-HR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\null
+\newpage
+\section{Maquette 3D NH-HR \textit{(Tâche 1.2)}}
+\label{section3DNHNR}
+
+\noindent\fbox{\noindent\begin{minipage}{1\textwidth}
+\noindent La maquette tri-dimensionnelle NH-HR est la maquette la mieux résolue sur l'horizontale (45 m) et la verticale (40 niveaux $\sigma$) implémentée dans le cadre du présent contrat.  De façon originale, cette maquette permet la simulation des "grandes structures turbulentes" \textit{(LES)}. Elle est pour cela basée sur le coeur non-hydrostatique et non-Boussinesq CROCO et met en oeuvre les schémas d'advection d'ordre supérieur et les schémas de diffusion turbulente isotropes disponibles dans CROCO, trois éléments essentiels et indispensables pour simuler numériquement à minima les instabilités primaires amorçant la cascade turbulente directe. Une comparaison détaillée de la dynamique à haute résolution avec celle simulée avec la maquette à plus basse résolution (NH-REF, section \ref{section3DNHREF}) montre que les processus de grande échelle sont représentés de façon comparable dans les deux maquettes. La simulation NH-HR permet en outre un raffinement du train d'ondes solitaires et surtout une représentation cohérente et explicite des instabilités de Kelvin-Helmholtz générées au voisinage du jet méditerranéen. 
+\end{minipage}
+}
+
+\subsection{Caractéristiques de la maquette NH-HR}
+
+Les caractéristiques numériques de la maquette à plus haute résolution NH-HR sont présentées dans le tableau \ref{tab_XEC}. Cette maquette est environ 4 fois mieux résolue que la maquette à basse résolution NH-REF dans chacune des deux directions horizontales (45 m contre 220 m) et la résolution verticale reste la même  (40 niveaux verticaux de type $\sigma$). Les épaisseurs minimales et maximales des couches $\sigma$ sont fournies dans cette table: la résolution verticale est la maquette est de l'ordre de la dizaine de mètre dans la région du détroit, et elle 2 fois plus grande que la résolution horizontale dans les zones les plus profondes.\\
+
+\begin{table}[!h]
+        %\begin{minipage}{.6\textwidth}
+        \centering
+        \begin{tabular}{|p{\linewidth/3}|c|c|}
+                \hline
+                Coeur numérique & \multicolumn{2}{c|} {CROCO-NBQ} \\
+                Domaine & \multicolumn{2}{c|} {6°4.8'W  5°3.4'W ;}\\
+                & \multicolumn{2}{c|} {35°23.8'N  36°27.4'N}\\
+                Nombre de points de grille horizontaux & \multicolumn{2}{c|} {2049x2621}  \\
+                Nombre de niveaux verticaux ($\sigma$) & \multicolumn{2}{c|} {40} \\
+                %\hline
+                $\Delta x = \Delta y$ & \multicolumn{2}{c|} {45 m}\\
+                %\hline
+                Depth & Min & Max\\
+                %\cline{2-3}
+                & 26 m & 960 m\\
+                %   \hline
+                $\Delta$z & 0.7 m & 24 m\\
+                Nombre de coeurs & \multicolumn{2}{c|} {447 (+1 serveur xios)}\\
+                Pas de temps interne ($\Delta t_s$) & \multicolumn{2}{c|} {1 s}\\
+                Pas de temps externe ($\Delta t_f$) & \multicolumn{2}{c|} {1/11 s}\\
+                Schémas d'advection & \multicolumn{2}{c|} {WENO-5 (T-S) , TVD (U-V-W)} \\
+                Coefficient de viscosité verticale $\nu$ & \multicolumn{2}{c|} {10$^{-6}$ m^{2}/s} \\
+                Coefficient de mélange vertical $K_\rho$ & \multicolumn{2}{c|} {10$^{-6}$ m^2/s}\\
+                $C_s$ & \multicolumn{2}{c|} {400 m/s}\\
+                Ondes de marée & \multicolumn{2}{c|} { $\text{M}_{\text{2}}$, $\text{S}_{\text{2}}$,                            $\text{K}_{\text{1}}$, $\text{O}_{\text{1}}$ }\\
+                \hline
+        \end{tabular}
+        \captionof{table}{Principales caractéristiques de la maquette NH-HR.}
+        \label{tab_NH-HR}
+        %\end{minipage}
+\end{table}
+
+L'hydrologie, les courants de marée et la circulation générale sont forcés comme pour la maquette NH-REF à partir d'une simulation hydrostatique "Mère" MitGcm du modèle opérationnel de la Méditerranée et de la Mer Noir de l'ENEA, gracieusement fournie par l'équipe de G. Sannino (ENEA, Rome)\footnote{http://www.enea.it/it/seguici/pubblicazioni/pdf-volumi/cresco-report-2016.pdf}. Ce forçage est utilisé comme condition initiale et comme conditions aux frontières ouvertes. Cette simulation "Mère" a une résolution horizontale variable d'environ 700 m dans la région du détroit, soit environ une quinzaine de fois supérieure à celle de la maquette à haute résolution NH-HR. Ce saut en résolution relativement élevé est associé à un changement de coordonnées verticales (le MitGcm est basé sur une grille à niveaux z, CROCO sur une grille $\sigma$).  Les cœurs dynamiques utilisés dans les simulations "Mère" et NH-HR sont de plus différents: la maquette NH-HR est en effet non-hydrostatique et non-Boussinesq alors que la version du modèle MitGcm utilisée pour réaliser la simulation "Mère" est hydrostatique et Boussinesq.\\
+L'ensemble de ces différences est à l'origine d'un choc violent lorsque la simulation NH-HR est initialisée et forcée directement à partir de la simulation Mère MitGcm. Un tel choc entraîne une période de \textit{spin-up} de plusieurs heures durant lesquelles la qualité des caractéristiques des masses d'eaux méditerranéenne et atlantique est peut-être fortement dégradée. En conséquence, un protocole de simulation spécifique a été mis en place:
+\begin{itemize}
+	\item La simulation à haute résolution (HR) est initialisée et forcée par la simulation "Mère" MitGcm.
+	\item Durant les 6 premières heures de simulation, le coeur hydrostatique, Boussinesq de CROCO est implémenté, limitant ainsi le choc initial et permettant une première "mise en équilibre" des champs initiaux sur la bathymétrie à haute résolution.
+	\item La simulation HR est alors redémarrée (\textit{Hot Restart}) en version non-Hydrostatique et non-Boussinesq.
+\end{itemize}
+Quatre ondes de marées sont forcées aux frontières latérales: ($\text{M}_{\text{2}}$, $\text{S}_{\text{2}}$, $\text{K}_{\text{1}}$, $\text{O}_{\text{1}}$). Ce forçage est intégré dans les sorties issues de la simulation MitGcm à 700 m.\\
+
+\subsection{Évaluation des coûts de calcul}
+
+ La résolution et l'extension horizontale de la maquette NH-HR sont choisies de telle sorte que les structures dynamiques les plus fines possibles puissent être explicitement simulées dans la région du détroit de Gibraltar pour un coût de calcul "raisonnable" avec le coeur non-hydrostatique et non-Boussinesq de CROCO. Le coût relatif de calcul de la maquette NH-HR est d'environ 0.8 (0.8 heures de calcul pour 1 heure simulée sur 447 cœurs sur la machine Datarmor). Le sur-coût associé au coeur non-hydrostatique et non-Boussinesq est d'environ 3 par rapport au coeur hydrostatique CROCO.\\
+Ce ratio de 0.8 autorise la simulation de plusieurs périodes de marée semi-diurne et permet par conséquent l'étude détaillée du contrôle hydraulique, de la génération d'instabilités primaires et d'ondes de gravité internes de grande amplitude dans la région du détroit. Une analyse harmonique plus fine des principales composantes de marée nécessiterait toutefois une simulation de plus longue durée.
+
+\subsection{Évaluation de la qualité des principales ondes de marée simulées}
+La qualité des ondes de marée simulées dans la simulation NH-HR est évaluée en deux temps:
+\begin{itemize}
+	\item Une inter-comparaison des anomalies de surface simulées dans les maquettes NH-REF et NH-HR a été réalisée sur l'ensemble du domaine numérique. L'erreur quadratique moyenne est d'environ 5 cm entre les deux maquettes, avec des valeurs plus élevées à l'est et au nord. 
+	\item Deux marégraphes disponibles dans la région simulée sont utilisés pour évaluer les erreurs l'élévation du niveau de la mer. Les résultats de cette évaluation sont détaillés au chapitre \ref{chapitredelivrables}, section \ref{mareedelivrable} du présent rapport.
+\end{itemize}
+
+\subsection{Ressaut hydraulique}
+
+La maquette NH-HR simule correctement le contrôle hydraulique localisé dans la région du seuil de Camarinal. Un tel contrôle est attendu dans cette région lorsque les courants de marée sont suffisamment puissants pour que le flot au-dessus du seuil devienne supercritique. Ce processus intervient à chaque période de marée durant 3 à 4 heures lorsque les courants de marée sont orientés vers l'Atlantique Nord (à l'exception notable de certaines périodes en régime de mortes-eaux durant lesquelles ces courants sont trop faibles). Le contrôle entraîne la formation d'un ressaut hydraulique dont la géométrie va dépendre de l'intensité des courants de marée. \\
+La figure \ref{fig_ressaut_NH-HR}.a présente une coupe verticale dans la région du Seuil de Camarinal lors d'une période d'\textit{outflow} maximum simulée avec la maquette NH-HR, et la figure \ref{fig_ressaut_NH-HR}.b la trace visible du ressaut en terme d'élévation de la surface libre dans la simulation. Le ressaut est visible sur la coupe vers -5.755° longitude dans la région où les surfaces isopycnales présentent une discontinuité d'une amplitude d'environ 70 m au-dessus du seuil.\\
+
+\subsection{Instabilités primaires (\textit{LES})}
+
+Dans la zone du jet méditerranéen sur le flanc ouest du seuil de Camarinal, la maquette NH-HR montre l'apparition d'instabilités primaires de type Kelvin-Helmholtz, telles qu'elles ont pu être observées par Wesson and Gregg (1994). Ces instabilités n'étaient pas présentes dans la simulation plus basse résolution (220 m) réalisée à partir de la maquette NH-REF. La présence potentielle de telles instabilités est confirmée par le calcul du nombre de Richardson, inférieur à 1/4 dans la région du ressaut. La faiblesse du nombre de Richardson s'explique par le fort cisaillement entre le jet Méditerranéen (vitesse supérieure à 2 m/s) et l'écoulement des eaux Atlantiques (de l'ordre de quelques dizaines de centimètres par seconde).\\
+La figure \ref{Coupe_Melange} prolonge la coupe de la figure \ref{fig_ressaut_NH-HR} dans le Bassin de Tanger et au-dessus du Seuil d'Espartel, et montre une comparaison du champs de masse volumique dans la maquette à haute résolution NH-HR et dans la maquette NH-REF.\\
+Une différence importante est l'augmentation notable de l'épaisseur du jet méditerranéen dans la simulation à haute résolution en aval (pour le jet méditerranéen) de chacun des accidents bathymétriques présents dans cette section verticale. La remontée des surfaces isopycnales observée sur cette figure pour la simulation à haute résolution peut sembler paradoxale puisque, pour des contraintes bathymétriques quasi-équivalentes, une augmentation de la seule résolution horizontale devrait plutôt conduire à une représentation plus fine du jet méditerranéen. Une explication pourrait être apportée par la présence de nombreuses instabilités de type Kelvin-Helmholtz se développant dans cette région. Ces instabilités primaires amorcent la cascade turbulente directe et entraînent un brassage \textit{(stirring)} explicitement simulé avec une résolution de 45 m. Ce brassage est finalement lui-même à l'origine d'une augmentation du mélange. Dans la simulation à plus basse résolution, ces instabilités constituent des processus "sous-maille", mal résolus pour lesquels un schéma de turbulence plus adapté devrait être mis en place. Ces résultats très préliminaires doivent maintenant être confirmés et de nouveaux diagnostiques sont en cours d'implémentation afin, en particulier, de mieux comprendre l'impact de la simulation des grandes structures turbulentes sur le mélange.\\
+
+
+\begin{figure}[!h]
+        \includegraphics[width=\textwidth]{./ressaut_2D_it790_vhr_IE2.png}
+        \caption{a) Coupe verticale du seuil de Camarinal. Couleur : vorticité d'axe y, traits plein : isopycnes, et vecteurs vitesse u-w. b) Élévation de la surface libre simulée avec la maquette NH-HR}
+        \label{fig_ressaut_NH-HR}
+        \end{figure}
+
+\begin{figure}[!h]
+        \includegraphics[width=\textwidth]{./media/comp_GExO_hr-vhr_IE.png}
+        \caption{Coupe verticale selon la section S2 de la figure \ref{fig_mod1_HR-REF}.b de la masse volumique dans les 2 maquettes 3D en $kg.m^{-3}$. En couleur: simulation NH-HR (résolution dec45 m, 40 niveaux $\sigma$), contours pointillés: simulation NH-REF (résolution de 220 m, même nombre de niveaux $\sigma$).}
+        \label{Coupe_Melange}
+        \end{figure}
+  	
+\subsection{Ondes internes de grande amplitude}
+
+Comme son homologue à plus basse résolution NH-REF, la maquette à haute résolution NH-HR est permet de simuler la génération et la propagation des modes 1 et 2 d'ondes internes de gravité dans le détroit de Gibraltar, ce qui est en accord avec les observations des satellites Sentinel 1 et 2. De façon similaires, des ondes de grande amplitude (de l'ordre de la centaine de mètres), sont générées lors de la relaxation du ressaut hydraulique au Seuil de Camarinal. Ces ondes ont une signature de mode 1. Elles sont précédées par la propagation d'un mascaret interne puis se décomposent en train d'ondes solitaires sous l'action de la dispersion non-hydrostatique qui vient équilibrer les non-linéarités liées à l'advection. Au cours de sa propagation dans le détroit de Tarifa, ce train d'onde va en partie se réfléchir sur les côtes en train ondes se propageant vers l'ouest. Afin de détailler l'apport de l'augmentation de la résolution sur ces ondes, la figure \ref{fig_mod1_HR-REF}.a présente une coupe verticale en densité du train d'ondes solitaires alors qu'il entre en Mer d'Alboran dans la maquette NH-HR (en couleur) et dans la maquette NH-REF (en pointillés). \\
+Les ondes de mode 1 se sont propagées plus vite dans la maquette NH-HR, et le nombre d'ondes dans le train est plus grand (5 contre 2). Ce comportement est le même à chaque période de marée et la variation du nombre de solitons d'une période de marée à une autre peut être simulée avec la maquette NH-HR. Cette forte variabilité diurne est illustrée dans le tableau \ref{tab_XEC}, réalisé en notant l'arrivée de l'onde de mode 1 au point le plus à l'est dans la figure \ref{fig_mod1_HR-REF}.a (ou à tous les points de la figure \ref{fig_mod1_HR-REF}.b pour le calcul de la vitesse de propagation). Les vitesses les plus fortes dans ce tableau correspondent à une advection par des courants de marée plus importants, on observe que ces périodes sont associées à un plus petit nombre d'ondes dans le train avec une périodicité elle aussi plus petite. Il est à noter que ces valeurs ne sont pas identiques pour toutes les latitudes à la sortie du détroit: du fait de la dispersion induite par la force de Coriolis, l'amplitude de la première onde est par exemple plus grande dans la partie sud.
+
+\begin{figure}[!h]
+ 	\includegraphics[width=\textwidth]{media/comp_train_it36_IE2_hr-vhr.png}
+ 	\caption{a) Coupe verticale selon la section S1 de densité (kg/m$^3$) dans les maquettes NH-REF (pointillés) et NH-HR (couleurs). b) Surface libre simulée avec la maquette NH-HR avec trace des sections S1 et S2 et points ayant servis pour la table \ref{tab_XEC}.}
+ 	\label{fig_mod1_HR-REF}
+\end{figure}
+
+\begin{table}[!h]
+	%\begin{minipage}{.6\textwidth}
+	\centering
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline
+		Numéro du train &  1 & 2 & 3 & 4  \\
+		\hline
+		Temps écoulé depuis le passage du train précédent (jour) & & 0.42 &0.6 & 0.41\\
+		Vitesse dans le détroit de Tarifa (m/s) & 1.6 & 1.9 & 1.6 & 2.1\\
+		Nombre d'ondes constituant le train & 11 & 5 & 8 & 2 \\
+		Amplitude du premier soliton (m) & 50 &70 &45 &40\\
+		Période moyenne (mn) & 20 & 12 & 18 & 12.5\\
+		\hline
+	\end{tabular}
+	\captionof{table}{Caractéristiques train d'ISW sortie est du détroit pour conditions MM}
+	\label{tab_XEC}
+	%\end{minipage}
+\end{table}
+
+\subsection{Génération de tourbillons dans le sillage des solitons}
+
+Les simulations NH-REF et NH-HR montrent la génération d'un tourbillon au passage des trains de solitons à la sortie du détroit. Cette génération pourrait être une conséquence des violents cisaillements de courants horizontaux générés par l'onde interne.\\
+La structure tourbillonnaire demeure dans cette région puis déforme le train d'ondes solitaires suivant. A notre connaissance, il n'existe pas d'observations ni de preuves directes de son existence.\\
+Son impact sur les solitons n'est toutefois pas négligeable puisque les simulations numériques montrent pour certaines périodes de marées une désorganisation du train d'ondes solitaires à la sortie du détroit. Cette déstructuration du train d'ondes solitaires pourrait être une conséquence de son interaction avec le tourbillon suivant ou être associée à la génération de la structure tourbillonnaire. Ces conséquences ont été observées par (Vlasenko et al., 2009) et pourraient quoiqu'il en soit confirmer indirectement la présence de la structure tourbillonnaire. Il convient toutefois d'être prudent et de nouvelles investigations sont actuellement en cours afin de préciser le mécanisme de génération du tourbillon et de rassembler des observations in situ pouvant confirmer sa présence.
+
+\subsection{Sensibilité au protocole de simulation et évolution de la maquette}
+La maquette NH-HR n'est bien sûr pas figée et plusieurs évolutions sont actuellement en cours:
+\begin{itemize}
+ \item La bathymétrie utilisée dans la maquette NH-HR du présent rapport est celle de la grille HOMONIM résolue à 500 m. Une bathymétrie résolue à 100 m du détroit a plus récemment été fournie et est en cours d'implémentation et de test dans la simulation NH-HR.
+ \item La maquette NH-HR a été utilisée pour simuler la dynamique du détroit dans différents régimes de marées (mortes-eaux, vives-eaux et marée moyenne), présentés au chapitre \ref{chapitredelivrables}. Leur exploitation est actuellement en cours.
+ \item L'impact de la stratification et de son évolution saisonnière sera explorée prochainement en choisissant une initialisation à une date différente dans les champs fournis par l'ENEA. Cette étude sera toutefois associée au retour du forçage atmosphérique afin de simuler de la façon la plus réaliste possible les mécanismes locaux de re-stratification. Comme indiqué en introduction du présent rapport, le groupe CROCO-Aérologie a en effet souhaité aborder par étapes l'étude de la dynamique dans la région du détroit. Lorsque cela a un sens, les forçages et par conséquent les processus et autres mécanismes physiques sont introduits progressivement. L'objectif d'une telle approche est double: mieux comprendre la dynamique locale et mieux contrôler le protocole de modélisation numérique.
+\end{itemize}
+
+\subsection{Discussion, conclusions}
+
+La maquette NH-HR permet, de façon attendue, de raffiner la simulation des ondes solitaires se propageant en direction de la Méditerranée depuis le détroit de Gibraltar. Une étude plus détaillée de ces ondes de grande amplitude à partir d'observations dédiées et, ou, d'une modélisation simultanée avec un modèle simplifié de type KdV devrait fournir de précieuses informations sur l'impact de la résolution sur la dissipation physique et la dissipation numérique, sur la dispersion non-hydrostatique ou encore sur la bonne représentation des processus non-linéaires.\\
+La maquette  NH-HR autorise en outre de façon originale la simulation explicite des "grandes structures turbulentes" (simulation dite \textit{LES}) dans la région du détroit de Gibraltar. L'augmentation de la résolution entre les maquettes NH-REF et NH-HR autorise en effet la simulation des structures tourbillonnaires associées aux instabilités primaires de type Kelvin-Helmholtz entre les masses d'eaux méditerranéenne et atlantique. Ces instabilités marquent classiquement l'amorce de la cascade turbulente directe induisant localement un important mélange des masses d'eaux. Ces instabilités ne sont pas représentées dans la simulation NH-REF par manque de résolution effective. Elles ne pourraient être simulées explicitement dans une simulation hydrostatique de même résolution (45 m) dans cette région. Ces instabilités sont en effet associées à une vorticité relative d'axe horizontal qui ne peut être simulée sous une hypothèse hydrostatique. Un résultat important pour cette première simulation pouvant être qualifiée de \textit{LES} concerne les différences importantes entre le mélange simulé au moyen des maquettes NH-REF et NH-HR. L'intercomparaison montre à minima une très forte dépendance au protocole de simulation. La maquette NH-REF (de type \textit{RANS}\footnote{RANS: Reynolds Average Navier Stokes simulation, simulation basée sur une représentation implicite des "grandes structures turbulentes" à partir d'un schéma de fermeture turbulent.}) permet une simulation implicite du mélange et dépend pour cela entièrement du schéma de fermeture turbulente.\\
+La maquette NH-HR montre donc l'importance d'une représentation explicite des "grandes structures turbulentes" dans des régions dynamiquement instables telles que la région du ressaut hydraulique. Elle donne de plus l'ordre de grandeur de la résolution horizontale (environ 45 m) et verticale (40 niveaux $\sigma$) permettant la simulation explicite des instabilités primaires.\\
+Une première évaluation de la pertinence et de la qualité des structures instables simulées a pu être réalisée à partir d'observations publiées (Wesson and Gregg 1994). Un protocole d'observations dédié devra toutefois être plus spécifiquement mis en oeuvre pour espérer évaluer les caractéristiques principales de ces instabilités (localisation spatio-temporelle, amplitude...) et surtout pour quantifier les caractéristiques statiques du mélange qu'elles induisent. La campagne d'observations planifiée par le SHOM dans la région du détroit à la fin de l'été 2020 (soit un peu plus d'un an après la publication du présent rapport) devrait sans aucun doute répondre à un certain nombre de questions. Les maquettes numériques développées et évaluées dans le cadre du projet Gibraltar 16CR01 pourront être utilisées pour préparer cette campagne via par exemple la génération d'observations synthétiques.\\
+Une discussion des principales perspectives associées à l'exploitation de la dynamique simulée d'une part et à l'évolution du protocole de simulation d'autre part est fournie au chapitre \ref{chapitreconclusion}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Généralisation du système de coordonnées
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Généralisation du système de coordonnées verticales.\\ \textit{(Tâche 2)}}
+
+Une pré-étude sur la pertinence d'une évolution du système de coordonnées verticales a été conduite par le professeur Eric Chassignet accueilli en 2017-2018 par le laboratoire d'Aérologie. Ce travail correspond à la Tâche 2 du contrat Gibraltar 16CR01 et a été décomposé en deux sous-tâches:
+\begin{itemize}
+\item{Analyse des solutions techniques \textit{(Tâche 2.1)}},
+\item{Mise en œuvre et validation \textit{(Tâche 2.2)}}.
+\end{itemize}
+Le rapport final écrit par Eric Chassignet est fourni en Annexe.\\
+Eric Chassignet a de surcroît co-organisé la première réunion des utilisateurs CROCO \textit{(CROCO USER-MEETING)} à Toulouse en Mai 2017.\\
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Chapitre Délivrables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Délivrables, fourniture d'un \textit{produit numérique}.\\ \textit{(Tâche 3)}}
+
+\label{chapitredelivrables}
+
+\noindent\fbox{\noindent\begin{minipage}{1\textwidth}
+Trois simulations ont été réalisées à partir de la maquette à haute résolution (45 m) NH-HR pour des marées de mortes-eaux, de vives-eaux et pour une marée d'amplitude moyenne. La dynamique des principales ondes de marée et la dynamique sub-tidale sont respectivement évaluées. 
+\end{minipage}
+}
+
+\section{Protocole de simulation}
+Début 2018, le contrat Gibraltar 16CR01 a fait l'objet d'un avenant portant sur la \textit{fourniture d'un produit numérique élaboré sur la base des maquettes numériques du détroit de Gibraltar telles que mises en place à la tâche 1}. Ce "produit numérique" est constitué de trois simulations numériques et leurs diagnostiques. Ces simulations numériques s'appuient sur la maquette numérique la plus réaliste et la mieux résolue présentée en section \ref{chapitremodele}.\ref{section3DNHNR}: la maquette NH-HR.
+\\
+
+\noindent Trois simulations \textit{(LES)} ont été réalisées avec la maquette NH-HR respectivement en condition de mortes-eaux (ME), vives-eaux (VE) et pour une marée intermédiaire (MM) entre ces deux marées extrêmes. 
+Les dates de début et de fin de ces simulations sont données dans la table \ref{tab_dates_MIV}. 
+Notons que ces périodes n'incluent pas les 6h de simulation hydrostatique nécessaires à l'initialisation (\textit{spin-up}). 
+Notons également qu'il n'y a pas d'autres processus de forçage (eg. circulation grande échelle, surcotes...) que la marée imposée aux frontières du domaine.
+
+\noindent La fréquence d'archivage des variables est de 1h sur l'ensemble du domaine, elle est moindre sur des zones d'intérêts pré-identifiées :
+\begin{itemize}
+\item Sur la région du Seuil de Camarinal (5°42'W - 5°48'W 35°52'N - 36°N) : sorties toutes les 2 minutes.
+\item Sur l'entrée en Mer d'Alboran (5°3'W - 5°20'W 35°50'N - 36°10'N) : sorties toutes les 15 minutes.
+\end{itemize}
+Le forçage barotrope de marée est issu de simulations du modèle opérationnel de l'ENEA (voir section \ref{chapitremodele}.\ref{section3DNHNR}) et contient uniquement les 4 composantes de marée $M_2$, $S_2$, $K_1$ et $O_1$. 
+La stratification est également issue de ce modèle aux dates d'initialisation de 
+chacune des 3 situations.\\
+
+\begin{table}[h]
+        %\begin{minipage}{.6\textwidth}
+        \centering
+        \begin{tabular}{|c|c|}
+                \hline
+                Situation & Dates (UTC)\\
+                \hline
+                Mortes Eaux (VE) & 13/09/2017 16h00 - 15/09/17 17h00 \\
+                %\hline
+                Marées Moyenne (MM) & 16/09/2017 19h00 - 18/09/17 20h00  \\
+                Vives Eaux (ME) & 19/09/2017 22h00 - 21/09/17 23h00  \\
+                \hline
+        \end{tabular}
+        \captionof{table}{Périodes de simulation pour les 3 sitituations VE, MM et ME}
+        \label{tab_dates_MIV}
+        %\end{minipage}
+\end{table}
+
+\section{Analyse des composantes de la marée}
+\label{mareedelivrable}
+Les figures \ref{fig_maree_tar} et \ref{fig_maree_ceu} représentent les variations du niveau de la mer dans chaque
+simulation par rapport aux données mesurées aux marégraphe de Tarifa et Ceuta. Ces données ont été mises à à disposition
+gracieusement par l'institut public espagnol \textit{Puertos del Estado} et le programme \textit{GLOSS} (SHOM) \footnote{Nous remercions Puertos des Estados et le programme Gloss pour la fourniture de ces données marégraphiques. L'utilisation de ces résultats devra être également portée à leur connaissance.}.\\
+Dans les 3 situations, les simulations sont en bon accord avec les observations marégraphiques. On observe toutefois de légers déphasages du cycle de marée (<1h), en avance ou au contraire en retard, selon les situations et les marégraphes. On observe aussi une différence d'amplitude entre les deux simulations et les données marégraphes résumées dans le tableau \ref{tab_rmse_MIV}. L'écart d'amplitude est de l'ordre de la dizaine de centimètres.
+
+\begin{figure}[!h]
+ 	\includegraphics[width=\textwidth]{./sla_tarifa_all.png}
+ 	\caption{Anomalie du niveau de la mer (m) à Tarifa (36°N 5°36'W) enregistrée par le marégraphe 	(courbe noire), 
+ 	interpolée dans le champ de forçage (courbe rouge), dans CROCO (courbe bleu) dans la situation ME (a), MM (b) et VE (c). 
+ 	En tirets bleus le signal filtré à 25h dans CROCO.}
+ 	\label{fig_maree_tar}
+\end{figure}
+
+\begin{figure}[!h]
+	\includegraphics[width=\textwidth]{./sla_ceuta_all.png}
+ 	\caption{Idem que figure \ref{fig_maree_tar} à Ceuta (35°54'N 5°19'W). 
+ 	Certaines mesures sont absentes pour la période VE.}
+ 	\label{fig_maree_ceu}
+\end{figure}
+
+Ces décalages ne sont pas identiques dans le cas du forçage par le MITgcm, 
+soulignant la grande sensibilité de la modélisation numérique du détroit. On peut avancer comme raison à cela le fait que les bathymétries des 
+2 modèles diffèrent. Les désaccords entre modèle(s) et marégraphes peuvent être dus également à un spectre de marée
+incomplet voire à des processus manquants (effets de pression...). Des études complémentaires pourraient être envisagées
+dans ces 2 cas. \\
+
+\begin{table}[h]
+        %\begin{minipage}{.6\textwidth}
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                Situation & \multicolumn{2}{c|}{Tarifa} &\multicolumn{2}{c|} {Ceuta}\\
+                &CROCO &MitGCM&CROCO &MitGCM\\
+                \hline
+                Mortes Eaux (VE) &10 cm &7 cm &9 cm& 6 cm\\
+                %\hline
+                Marée Moyenne (MM) & 13 cm&10 cm &12 cm&9 cm \\
+                Vives Eaux (ME) & 14 cm& 11 cm& 12 cm&9 cm \\
+                \hline
+        \end{tabular}
+        \captionof{table}{Erreur quadratique moyenne de l'anomalie de niveau de la mer entre les simulations et les marégraphes.}
+        \label{tab_rmse_MIV}
+        %\end{minipage}
+\end{table}
+
+\section{Analyse de la dynamique aux échelles subtidales}
+Le signal aux échelles subtidales est également ajouté à cette fourniture. Pour d'aussi courtes périodes de simulation (50 h), le signal de marée n'est pas filtrable par analyse harmonique 
+(15 jours seraient nécessaires) ni par filtrage de Demerliac (filtre digital à 72h). Un filtrage par  moyenne glissante avec une fenêtre à 25 h a donc été implémenté et appliqué aux différentes variables (\textit{i.e.} niveau de la mer, courants, courants barotropes) issues de chaque simulation.\\
+La qualité et la performance du filtrage ont été étudiées de manière statistique (écart-type temporel) en moyenne sur le domaine et aux marégraphes de Tarifa et Ceuta
+où nous disposons de données sur la période étudiée. \\
+En moyenne sur l'ensemble du domaine, en situation de mortes-eaux, 91\% de la variabilité du signal d'élévation du niveau de la mer est retiré par ce filtrage. 
+En situation de marée moyenne (resp. de vives-eaux), ce filtrage permet de retirer 95\% (resp. 97\%) de la variabilité du signal d'élévation du niveau de la mer. \\
+Aux marégraphes de Tarifa et Ceuta, les ordres de grandeur sont similaires et renseignés dans la table \ref{tab_stats_MIV}.
+La variation temporelle du signal d'élévation résiduel du niveau de la mer est représentée dans les 3 situations sur les figures \ref{fig_maree_tar} et \ref{fig_maree_ceu}.
+
+\begin{table}
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+                \hline
+                Situation & \multicolumn{3}{c|}{Part de signal filtré}\\
+                & Tout le domaine & Tarifa & Ceuta\\
+                \hline
+                Mortes Eaux (VE) &  91\% & 93\% & 86\%\\
+                %\hline
+                Marée Moyenne (MM) & 95\% & 90\% & 93\%  \\
+                Vives Eaux (ME) & 96\% & 93\% & 95\% \\
+                \hline
+        \end{tabular}
+        \captionof{table}{Performances du filtrage pour les 3 situations VE, MM et ME}
+        \label{tab_stats_MIV}
+        %\end{minipage}
+\end{table}
+
+\section{Consultation et récupération des délivrables (Dépôt)}
+
+Comme stipulé dans le contrat Gibraltar 16CR01, l'ensemble des délivrables (\textit{produits numériques}) est mis à disposition sur la machine Datarmor accessible par les deux parties (\textit{SHOM} et \textit{Laboratoire d'Aérologie}). La table \ref{delivrables} résume l'ensemble des informations nécessaires à leur consultation et à leur récupération. \\
+Le répertoire Livraison SHOM contient les fichiers des champs filtrés à 25 h (\textit{gibraltar\_nh-hr\_*.filt.nc}) pour les 3 situations (mortes eaux, vives eaux et marée moyenne) ainsi qu'un répertoire \textit{ Configuration\_NH-HR} où se trouvent les fichiers  \textit{cppdefs.h},  \textit{param.h} et \textit{croco.in.GIBRALTAR} servant à l'initialisation du modèle CROCO pour la maquette du détroit de Gibraltar 3D NH-HR. Les 3 simulations réalisées à partir de cette maquette sont également mises à disposition. Leur localisation est également décrite dans la table \ref{delivrables}. Les fichiers disponibles pour ces simulations sont :
+\begin{itemize}
+\item \textit{GBR\_NBQ\_his1h.nc} : Sorties toutes les heures sur tout le domaine des champs de courants horizontaux, courants barotropes et d'élévation de la surface libre 
+\item \textit{GBR\_NBQ\_his3h.nc} : Sorties toutes les 3 heures sur tout le domaine des champs de masse volumique, salinité, température et vitesse verticale 
+\item \textit{GBR\_NBQ\_his\_CS.nc} : Sorties toutes les 2 minutes dans la région du Seuil de Camarinal des champs de courants 3D, courants barotropes, élévation de la surface libre, masse volumique, salinité et température
+\item \textit{GBR\_NBQ\_his\_XE.nc} : Sorties toutes les 15 minutes dans la région de la sortie est du détroit des champs de courants 3D, courants barotropes, élévation de la surface libre, masse volumique, salinité et température
+\end{itemize}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Contenu & Machine & Répertoire\\
+		\hline
+		Livraison SHOM & Datarmor & /home6/scratch/cnguyen/NHOMS/Livraison\_SHOM/ \\
+		%\hline
+ 		Simulation mortes-eaux (ME)  & Datarmor & \$DIR/Run\_Gbr3d\_50mV2\_nbq\_ME2\_N40/ \\
+		%\hline
+ 		Simulation vives-eaux (VE)  & Datarmor & \$DIR/Run\_Gbr3d\_50mV2\_nbq\_VE2\_N40/ \\
+		%\hline
+ 		Simulation marée moyenne (MM)  & Datarmor & \$DIR/Run\_Gbr3d\_50mV2\_nbq\_IE2\_N40/ \\
+ 		\hline
+	\end{tabular}
+	\captionof{table}{Localisation des délivrables (\textit{produits numériques}).\\ Le répertoire d'origine est \$DIR = /home6/datawork/cnguyen/NHOMS/croco\_loc/ }
+	\label{delivrables}
+	%\end{minipage}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Contrat Gibraltar 16CR01: principaux résultats et perspectives}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{chapitreconclusion}
+
+Une hiérarchie de maquettes numériques de la région du détroit de Gibraltar a été implémentée dans le cadre du contrat Gibraltar 16CR01 avec pour principal objectif scientifique le développement d'une "simulation des grandes structures turbulentes``  \textit{(LES)} dans cette région. Une étude détaillée de la dynamique de \textit{fine échelle} a été proposée à partir de ces maquettes numériques. Plusieurs \textit{produits numériques} ont contractuellement été fournis et sont désormais disponibles sur le serveur CROCO du laboratoire d'Aérologie. Un rapport d'évaluation de la pertinence de coordonnées verticales généralisées a été fourni en Annexe.\\
+
+\section{Principaux résultats}
+ 
+La simulation des grandes structures turbulentes \textit{(LES)} de la région du détroit de Gibraltar ouvre des perspectives prometteuses pour l'étude de la cascade turbulente conduisant au mélange des masses d'eau. L'océan global est en effet connu pour n'abriter qu'un nombre vraisemblablement limité de régions présentant un mélange notable des masses d'eaux: régions peu-profondes localisées sur les plateaux continentaux ou dans les détroits, couches limites de fond et de surface abritant de violents cisaillements de courant, régions abritant sporadiquement des déferlements d'ondes de gravité ou des instabilités convectives... En dehors de ces "patchs" de mélange localisés dans l'espace et le temps, le mélange diapycnal dans la majeure partie de l'océan demeure faible (Munk et Wunsch, 1998). Cette double localisation des zones de mélange intense a plusieurs conséquences:
+ \begin{itemize}
+ 	\item Le mélange diapycnal demeure difficile à quantifier et ses conséquences difficiles à évaluer: il est en effet intimement lié à des mécanismes de "fine échelle" mais il a des conséquences importantes sur les caractéristiques des masses d'eau et sur le maintien de la circulation à l'échelle globale.
+ 	\item Les observations directes du mélange et de la cascade turbulente directe dont il est une conséquence sont difficiles à réaliser, relativement récentes et restent très parcellaires.
+ 	\item La simulation directe du mélange diapycnal dans les modèles numériques est impossible et sa paramétrisation complexe.
+ \end{itemize}
+ La présente étude apporte ainsi plusieurs types de contributions pour progresser vers une meilleure connaissance du mélange diapycnal et de ses effets induits.\\
+ 
+\noindent \textit{\textbf{Une région abritant un "patch" de mélange diapycnal intense}}\\
+ Les résultats obtenus à partir de la maquette NH-HR montrent très clairement la présence d'une région de mélange intense légèrement à l'ouest du seuil de Camarinal, dans la région du ressaut hydraulique, et au dessus des principaux accidents bathymétriques. Même si l'amplitude des processus qui l'induisent est modulée par le cycle de marée, il n'en demeure pas moins que la région du détroit de Gibraltar est une zone privilégiée pour l'étude du mélange puisqu'elle abrite en permanence des "patches" de mélange intense entre deux masses constitutives de la circulation océanique générale. \\
+ 
+\noindent\textit{\textbf{Une simulation originale des grandes échelles turbulentes (LES)}}\\
+La simulation de la région du détroit avec des maquettes de mieux en mieux résolues a permis de montrer qu'une résolution de l'ordre de quelques dizaines de mètres (45 m pour 40 niveaux verticaux "$\sigma$") était à minima nécessaire pour modéliser explicitement les instabilités de type Kelvin-Helmholtz dans la région du détroit. Ces instabilités dites primaires initient localement la cascade turbulente directe conduisant au mélange des masses d'eau atlantique et méditerranéenne.\\
+Le code CROCO et son coeur non-hydrostatique et non-Boussinesq ont ainsi été implémentés dans la région du détroit de Gibraltar (maquette NH-HR) afin de réaliser une simulation explicite des grandes structures turbulentes \textit{(LES)} dans la région du détroit. A notre connaissance, une telle simulation avec un code à surface libre explicite est une première.\\
+
+\noindent\textit{\textbf{Une dynamique de "fine échelle"}}\\
+La maquette NH-HR a de surcroît permis de confirmer les résultats obtenus par Bordois (2015) et Bordois et al. (2016, 2017) à partir de sections verticales 2D: caractéristiques spatiales et temporelles de l'onde solitaire, génération de solitons mode 1 et mode 2, génération d'ondes topographiques... Plusieurs réflexions des ondes solitaires sur les côtes bordant le détroit ont de plus été mises en évidence et comparées aux observations disponibles dans la région. La dynamique du ressaut hydraulique a pu être précisée et le développement d'instabilités primaires de type Kelvin-Helmholtz a été confirmée à l'interface entre les eaux méditerranéenne et atlantique. La génération de tourbillons d'extension réduite au passage des solitons internes a été confirmée et le rôle déstructurant de ces tourbillons sur les trains de solitons est actuellement en cours d'étude.
+La qualité de la simulation des ondes et courants de marée dans cette région d'extension réduite et très active dynamiquement a été évaluée et des stratégies de simulation ont été proposées et implémentées pour améliorer la précision numérique des prévisions.\\
+
+\section{Perspectives}
+
+ \noindent\textit{\textbf{Perspectives numériques}}\\
+ Comme discuté à plusieurs reprises dans le présent rapport, les différentes maquettes implémentées et exploitées dans le cadre du projet Gibraltar 16CR01 ne sont pas figées mais en constante évolution. Les évolutions en cours sont multiples:
+ \begin{itemize}
+     \item Le code communautaire CROCO et son coeur numérique non-hydrostatique et non-Boussinesq CROCO-NBQ sont aménés à évoluer. De nouveaux schémas d'advection, de fermeture turbulente LES ou plus fondamentalement de couplage des modes numériques (associés au \textit{mode splitting}) sont en cours de développement et de test.
+     \item La quête pour une plus grande efficacité du code a déjà permis des gains importants depuis la première implantation de l'algorithme non-hydrostatique, non-Boussinesq dans le code de recherche SNBQ. Elle se poursuit actuellement avec le portable du code sur des machines à structure dite hétérogène (CPU-GPU).
+     \item En lien avec les futurs gains en efficacité de calcul, la maquette à haute résolution NH-HR est aussi amenée à évoluer vers plus de réalisme: les conséquences du forçage par la circulation générale et la marée étant correctement appréhendées, le forçage atmosphérique peut désormais être introduit. Le domaine simulé est de plus en cours d'extension, en particulier vers l'ouest.
+ \end{itemize}
+ 
+\noindent\textit{\textbf{Portabilité de l'approche "LES"}}\\
+Le coeur numérique non-hydrostatique, non-Boussinesq est implanté dans le code communautaire CROCO héritant ainsi de toutes les fonctionnalités (en termes de pré et de post-traitements) et de l'importante communauté d'utilisateurs de ROMS-AGRIF. L'étude réalisée dans le cadre du projet Gibraltar 16CR01 montre l'adéquation originale de ce code avec le basculement de la modélisation numérique de l'océan vers la simulation des grandes structures turbulentes (\textit{LES}). Cette approche numérique peut aujourd'hui être aisément utilisée dans d'autres régions du globe pour lesquelles une "simulation des grandes structures turbulences" pourrait permettre d'ouvrir d'intéressantes perspectives en termes de dynamique de l'océan global:
+\begin{itemize}
+	\item La région littorale dans laquelle vagues, niveau de la mer et courants sont intimement liés via des mécanismes de fine (voire de très fine) échelle.
+	\item Les régions de détroit, de seuils et autres fjords sont potentiellement associées, comme le montre la présente étude, à des processus de contrôle hydraulique, de générations d'ondes de gravité et finalement de mélange intense.
+	\item La couche d'Ekman présente de forts cisaillements de courants et donc potentiellement des instabilités de fine échelle.
+	\item Les régions de "formations d'eaux denses" (zones de convection profonde, rebords des talus continentaux...) présentent des processus induisant potentiellement de fortes accélérations verticales ainsi qu'un important mélange induit.
+	\item Les marées internes sont associées dans leurs zones de génération et de déferlement à d'intenses \textit{patchs} de mélange...
+\end{itemize}
+
+\noindent\textit{\textbf{Raffinement possible des modèles de circulation générale (OGCM)}}\\
+Le code communautaire CROCO a en outre hérité des fonctionnalités d'imbrication et de zoom interactifs\footnote{En anglais two-way nesting.} de ROMS-AGRIF. La maquette NH-HR ouvre par conséquent de nombreuses perspectives de raffinement des OGCM dans des régions connues pour abriter sporadiquement ou continuellement des processus de fine échelle ayant un impact directe sur la circulation et les masses d'eau. Les modèles numériques concernés ne résolvant pas la physique de ces fines échelles (non-hydrostatique en particulier...) et ne disposant pas non plus de la résolution nécessaire (quelques dizaines de mètres seulement), l'imbrication de zooms est la seule alternative à la paramétrisation brutale de l'ensemble des processus non résolus.\\
+Un exemple d'application directe de la présente étude concerne l'imbrication de la maquette NH-HR dans un modèle global de la circulation méditerranéenne.\\
+ 
+\noindent\textit{\textbf{Le mélange diapycnal et ses conséquences}}\\
+Le raffinement local de la circulation générale ouvre donc aussi des perspectives pour une meilleure représentation du "mélange" dans les modèles numériques de bassin. On peut en effet supposer que le mélange induit dans des régions telles que la région du ressaut hydraulique à Gibraltar sera plus facilement localisé et ainsi beaucoup mieux quantifié si l'on est capable de simuler explicitement les plus grandes structures turbulentes dans cette région. Leur modélisation implicite dans les simulations RANS réalisées jusqu'à présent repose en effet entièrement sur des schémas de fermeture turbulente représentant les conséquences des instabilités primaires. La simulation explicite d'une partie au moins de ces instabilités (les "structures turbulentes de grande échelle") permet une comparaison avec des observations directes ainsi qu'une analyse plus fine de leurs conséquences. \\
+Dans la région du détroit de Gibraltar toujours, nous disposons enfin avec la maquette NH-HR d'un outil d'étude de la formation du jet méditerranéen. Les mécanismes de génération du contenu en vorticité potentielle peuvent ainsi être étudiés à partir d'une maquette d'extension horizontale légèrement plus étendue. Une telle étude devrait permettre de mieux comprendre comment les différents mécanismes induisant un mélange notable peuvent modifier le contenu en vorticité potentielle de ce courant, bien en amont de la génération des instabilités baroclines auxquelles il est finalement soumis.\\
+
+
+\noindent\textit{\textbf{La complémentarité avec les futures campagnes d'observations}}\\
+Les simulations numériques et l'étude de la dynamique de \testit{fine échelle} ont montré la nécessité d'une simulation des \textit{grandes structures turbulentes (LES)} dans la région du détroit de Gibraltar et dans la foulée l'adéquation du protocole original de modélisation basé sur le code CROCO. Les processus de \textit{fine échelle} (ressauts hydrauliques, trains d'ondes solitaires, mécanisme de génération du jet méditerranéen, ondes de sillage, structures tourbillonnaires, instabilités primaires de Kelvin-Helmholtz...) ont pu être simulés explicitement. A notre connaissance, cette dynamique de \textit{fine échelle} n'a pas à ce jour fait l'objet d'observations in-situ dédiées dans la région du détroit. Une campagne d'observations permettrait d'évaluer précisément la pertinence de ce protocole de modélisation et des choix numériques. Elle ouvrirait aussi la porte à de nouveaux développements en mettant en évidence les limites du système actuel et permettrait finalement de préciser la localisation, la périodicité et l'amplitude des processus et autres mécanismes de \textit{fine échelle} mis en évidence.
+
+\newpage
+ 
+%%%%%%%%
+%%% Bibliographie
+%%%%%%%
+%\newpage
+\addcontentsline{toc}{chapter}{Bibliographie}
+\nocite{Baines1995}
+\nocite{Bordois15}
+\nocite{Bordois16}
+\nocite{Bordois17}
+\nocite{BS84}
+\nocite{FA1988}
+\nocite{FA1986}
+\nocite{Garett90}
+\nocite{Vazquez2006}
+\nocite{SG2011}
+%\nocite{Sannino2014}
+\nocite{Naranjo2014}
+\nocite{Brandt1996}
+\nocite{Sannino2002}
+\nocite{Sannino2004}
+\nocite{Sannino2007}
+\nocite{Sannino2009}
+\nocite{Sannino2009b}
+\nocite{Sannino2015}
+\nocite{Izquierdo2001}
+\nocite{Auclair2018}
+\nocite{Auclair2011}
+\nocite{SN2015}
+\nocite{CW90}
+\nocite{Beth79}
+\nocite{Bray95}
+\nocite{FA1988}
+\nocite{Bormans1989}
+\nocite{Vlasenko2009}
+\nocite{Bryden94}
+\nocite{SG2008}
+\nocite{Wesson94}
+\nocite{Dossmann2012}
+\nocite{Grinstein2007}
+\nocite{Bruno2002}
+\nocite{tpxo8}
+\nocite{alpers85}
+\nocite{Debreu2012}
+\nocite{Penven2006}
+\nocite{Shchepetkin2003}
+\nocite{Shchepetkin1998}
+\nocite{S2005}
+\nocite{Marchesiello2001}
+\nocite{Marchesiello2003}
+\nocite{Munk1998}
+
+%\begin{multicols}{2}
+%\bibliographystyle{plain}
+\bibliographystyle{acm}
+\bibliography{bibliography}
+%\end{multicols}
+
+\newpage
+	 \null
+\newpage
+
+ \chapter*{Annexe: rapport rédigé par E. Chassignet \textit{(Tâche 2)}}
+\addcontentsline{toc}{chapter}{Annexe: rapport rédigé par E. Chassignet \textit{(Tâche 2)}}
+\newpage
+	 \null
+\newpage
+\includepdf[pages=-]{RapportSHOMEChassignet2017.pdf}
+
+\end{document}
+
+
+
+
+
+
+

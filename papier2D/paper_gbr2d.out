@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Numerical configuration}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{The numerical forecasting system}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Continuous free-surface compressible equations in z-coordinates}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Density and pressure decomposition}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Slow vs fast components}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Bathymetry of the numerical configuration}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Water mass and tidal forcing}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Initialization of density profile and shear current : effect of Coriolis Pseudo-Force}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{The reference "forecast"}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Comparison with in situ observations}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Compared dispersion and dissipation with Korteweg-de Vries \(KdV\) dynamics and satellite images}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Sensitivity testing}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Physical factors}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Numerical factors}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Discussion and conclusion}{}% 16
+\BOOKMARK [1][-]{section.6}{Appendix : Computation of a Froude number}{}% 17
